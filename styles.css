@@ -98,9 +98,9 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   letter-spacing: -0.025em;
 }
-h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); font-weight: 700; }
-h2 { font-size: clamp(1.875rem, 3vw, 2.75rem); }
-h3 { font-size: 1.5rem; }
+h1 { font-size: clamp(1.85rem, 4.5vw, 3.75rem); font-weight: 700; overflow-wrap: break-word; word-wrap: break-word; hyphens: auto; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.75rem); overflow-wrap: break-word; }
+h3 { font-size: 1.5rem; overflow-wrap: break-word; }
 h4 { font-size: 1.15rem; }
 
 p { color: var(--slate-700); }
@@ -738,12 +738,16 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 720px) {
-  .section { padding: 60px 0; }
+  html, body { overflow-x: hidden; }
+  .section { padding: 56px 0; }
+  .container { padding: 0 20px; }
+
+  /* Header */
   .menu-toggle { display: inline-flex; }
   .nav-links {
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: var(--white);
+    background: #ffffff;
     flex-direction: column;
     align-items: stretch;
     padding: 16px;
@@ -754,14 +758,76 @@ img { max-width: 100%; display: block; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 14px 18px; }
   .nav-cta { margin: 8px 0 0; width: 100%; justify-content: center; }
-  .hero-stats { grid-template-columns: 1fr 1fr; gap: 18px; }
-  .stats-strip { grid-template-columns: 1fr 1fr; padding: 30px; gap: 24px; }
-  .stat-item .value { font-size: 2rem; }
-  .topbar-info { font-size: 12px; gap: 14px; }
+
+  /* Top bar */
+  .topbar { padding: 8px 0; }
+  .topbar .container { gap: 10px; }
+  .topbar-info { font-size: 11px; gap: 14px; row-gap: 6px; }
+  .topbar-info span { display: none; }
+  .topbar-social { display: none; }
+
+  /* Hero — refined for mobile */
+  .hero { padding: 50px 0 70px; }
+  .hero h1 { font-size: 1.95rem; line-height: 1.15; }
+  .hero p.lead { font-size: 1rem; }
+  .hero-eyebrow { font-size: 11px; padding: 6px 12px; margin-bottom: 18px; }
+  .hero-cta { width: 100%; }
+  .hero-cta .btn { flex: 1; justify-content: center; min-width: 0; }
+  .hero-stats { grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 40px; padding-top: 28px; }
+  .hero-stat-value { font-size: 1.5rem; }
+  .hero-stat-label { font-size: 11px; }
   .hero-floating { display: none; }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-  .form-card { padding: 28px; }
+  .hero-card { padding: 22px; }
+  .hero-card-mini { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .track-form { flex-direction: column; gap: 12px; }
+  .track-form .btn { width: 100%; justify-content: center; }
+
+  /* Sections */
+  .section-title { font-size: 1.75rem; }
+  .section-subtitle { font-size: 0.95rem; margin-bottom: 36px; }
+  .section-eyebrow { font-size: 11px; letter-spacing: 0.16em; }
+
+  /* Stats strip */
+  .stats-strip { grid-template-columns: 1fr 1fr; padding: 28px; gap: 22px; }
+  .stat-item .value { font-size: 1.85rem; }
+
+  /* Process */
+  .process-grid { gap: 22px; }
+  .process-num { width: 54px; height: 54px; font-size: 1.2rem; }
+
+  /* CTA */
+  .cta-block { padding: 32px; }
+  .cta-block h2 { font-size: 1.5rem; }
+
+  /* Forms */
+  .form-card { padding: 24px; }
+  .form-card h3 { font-size: 1.25rem; }
+
+  /* Tracking */
   .track-meta { grid-template-columns: 1fr 1fr; }
   .timeline-item { grid-template-columns: 24px 1fr; }
   .timeline-time { grid-column: 2; font-size: 12px; margin-top: 4px; }
+
+  /* Page header */
+  .page-header { padding: 50px 0 60px; }
+  .page-header h1 { font-size: 2rem; }
+
+  /* Service detail cards */
+  .service-detail { padding: 28px; }
+  .service-detail .big-icon { width: 64px; height: 64px; }
+
+  /* Footer */
+  .footer { padding: 50px 0 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { padding: 20px 0; }
+}
+
+@media (max-width: 420px) {
+  .hero h1 { font-size: 1.75rem; }
+  .hero-stats { gap: 10px; }
+  .hero-stat-value { font-size: 1.3rem; }
+  .hero-stat-label { font-size: 10px; }
+  h1 { font-size: 1.75rem; }
+  .stats-strip { padding: 22px; gap: 16px; }
+  .stat-item .value { font-size: 1.6rem; }
 }
