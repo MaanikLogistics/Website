@@ -156,25 +156,30 @@ img { max-width: 100%; display: block; }
 .brand-mark {
   width: 44px; height: 44px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--ink-700), var(--ink-900));
-  display: grid; place-items: center;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.15rem;
-  font-family: var(--font-display);
-  box-shadow: var(--shadow-sm);
-  position: relative;
   overflow: hidden;
-  letter-spacing: 0;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  background: var(--ink-800);
+  display: block;
+  position: relative;
 }
-.brand-mark::after {
-  content: '';
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Hidden text fallback for accessibility — only shows if image fails */
+.brand-mark span {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 62%, var(--copper-500) 62%);
-  opacity: 0.95;
+  display: grid; place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  z-index: -1;
 }
-.brand-mark span { position: relative; z-index: 1; }
 .brand-name { line-height: 1.05; font-weight: 700; }
 .brand-name small { display: block; font-size: 10px; font-weight: 500; color: var(--copper-600); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 2px; }
 
