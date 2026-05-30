@@ -11,23 +11,28 @@
      Deep ink, burnished copper, warm bone background.
      ============================================ */
 
-  /* INK — deep petrol/midnight (was navy) */
-  --ink-900:  #081420;
-  --ink-800:  #0e2433;
-  --ink-700:  #1a3a52;
-  --ink-100:  #dde4eb;
+  /* INK — warm dark plum (subtly tinted from cool blue toward warm) */
+  --ink-900:  #100c16;
+  --ink-800:  #1c1726;
+  --ink-700:  #2c2538;
+  --ink-100:  #e5e1ea;
 
-  /* COPPER — burnished metal accent (was bright orange) */
-  --copper-700: #7d4a26;
-  --copper-600: #9a5f35;
-  --copper-500: #b47547;
-  --copper-400: #c89172;
-  --copper-100: #f0e1d2;
+  /* COPPER → GOLD-AMBER (shifted slightly more golden to harmonize with logo) */
+  --copper-700: #7d521e;
+  --copper-600: #a26d2e;
+  --copper-500: #c08846;
+  --copper-400: #d4a572;
+  --copper-100: #f4e6cf;
 
-  /* BONE / CREAM — warm neutrals (was sterile white) */
-  --bone:     #f5f1ea;
-  --ivory:    #faf7f1;
-  --cream:    #ede7da;
+  /* WINE — subtle deep burgundy for accents */
+  --wine-700:   #4a141b;
+  --wine-500:   #7a2530;
+  --wine-100:   #f0d8db;
+
+  /* BONE / CREAM — warm neutrals (slightly warmer to harmonize) */
+  --bone:     #f5efe4;
+  --ivory:    #faf6ed;
+  --cream:    #ede4d3;
 
   /* CHARCOAL / STONE — text & borders */
   --charcoal-900: #14181f;
@@ -230,8 +235,8 @@ img { max-width: 100%; display: block; }
   transition: all var(--transition);
   white-space: nowrap;
 }
-.btn-primary { background: var(--copper-500); color: #ffffff; box-shadow: 0 8px 20px -8px rgba(180, 117, 71, 0.45); }
-.btn-primary:hover { background: var(--copper-600); color: #ffffff; transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(154, 95, 53, 0.55); }
+.btn-primary { background: var(--copper-500); color: #ffffff; box-shadow: 0 8px 20px -8px rgba(192, 136, 70, 0.5); }
+.btn-primary:hover { background: var(--copper-600); color: #ffffff; transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(162, 109, 46, 0.6); }
 .btn-secondary { background: var(--white); color: var(--navy-800); border: 1.5px solid var(--slate-300); }
 .btn-secondary:hover { border-color: var(--navy-800); color: var(--navy-800); background: var(--slate-50); }
 .btn-light { background: rgba(255, 255, 255, 0.12); color: var(--white); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.2); }
@@ -254,8 +259,8 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(at 80% 20%, rgba(255, 107, 26, 0.18) 0, transparent 50%),
-    radial-gradient(at 10% 90%, rgba(19, 58, 107, 0.5) 0, transparent 50%);
+    radial-gradient(at 80% 20%, rgba(192, 136, 70, 0.22) 0, transparent 50%),
+    radial-gradient(at 10% 90%, rgba(122, 37, 48, 0.35) 0, transparent 50%);
   pointer-events: none;
 }
 .hero::after {
@@ -276,14 +281,14 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 10px;
   padding: 8px 16px;
-  background: rgba(255, 107, 26, 0.15);
+  background: rgba(192, 136, 70, 0.18);
   color: var(--orange-500);
   border-radius: 100px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  border: 1px solid rgba(255, 107, 26, 0.3);
+  border: 1px solid rgba(192, 136, 70, 0.35);
   margin-bottom: 24px;
 }
 .hero h1 { color: #ffffff; margin-bottom: 22px; }
@@ -536,7 +541,7 @@ img { max-width: 100%; display: block; }
   right: -50px; top: -50px;
   width: 250px; height: 250px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 107, 26, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(192, 136, 70, 0.25), transparent 70%);
 }
 .stat-item .value { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; line-height: 1; color: var(--white); }
 .stat-item .value span { color: var(--orange-500); }
@@ -637,7 +642,7 @@ img { max-width: 100%; display: block; }
 .timeline-item { display: grid; grid-template-columns: 32px 1fr auto; gap: 16px; align-items: start; padding: 16px; background: var(--white); border-radius: 10px; }
 .timeline-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--slate-300); margin-top: 4px; }
 .timeline-item.done .timeline-dot { background: var(--success); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.18); }
-.timeline-item.current .timeline-dot { background: var(--orange-500); box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.2); }
+.timeline-item.current .timeline-dot { background: var(--orange-500); box-shadow: 0 0 0 4px rgba(192, 136, 70, 0.25); }
 .timeline-item h5 { font-family: var(--font-display); color: var(--navy-800); font-size: 1rem; margin-bottom: 4px; }
 .timeline-item p { font-size: 13px; color: var(--slate-500); margin: 0; }
 .timeline-time { font-size: 13px; color: var(--slate-500); }
@@ -683,7 +688,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(at 80% 20%, rgba(255, 107, 26, 0.18) 0, transparent 50%),
+    radial-gradient(at 80% 20%, rgba(192, 136, 70, 0.22) 0, transparent 50%),
     linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size: auto, 60px 60px, 60px 60px;
@@ -810,7 +815,7 @@ img { max-width: 100%; display: block; }
   background: var(--copper-500);
 }
 .mv-card-dark {
-  background: linear-gradient(135deg, var(--ink-800), var(--ink-900));
+  background: linear-gradient(135deg, var(--ink-800) 0%, var(--ink-900) 60%, var(--wine-700) 100%);
   color: #fff;
   border: none;
 }
