@@ -52,54 +52,52 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero — banner -->
+  <section class="hero hero-banner-section">
     <div class="container">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-eyebrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            Your Gateway for Global Trade Solutions
-          </div>
-          <h1>Source from India. <span>Delivered worldwide</span>, end-to-end.</h1>
-          <p class="lead">Maanik Logistics connects international buyers with trusted Indian manufacturers and suppliers — handling sourcing, vendor verification, quality assurance, export documentation and worldwide freight, all under one roof.</p>
-          <div class="hero-cta">
-            <a href="contact.html" class="btn btn-primary">Start Sourcing
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-            <a href="services.html" class="btn btn-light">Explore Services</a>
-          </div>
-          <div class="hero-stats">
-            <div><div class="hero-stat-value">11+</div><div class="hero-stat-label">Industries Served</div></div>
-            <div><div class="hero-stat-value">120+</div><div class="hero-stat-label">Countries Reached</div></div>
-            <div><div class="hero-stat-value">500+</div><div class="hero-stat-label">Vetted Suppliers</div></div>
-          </div>
+      <div class="hero-banner-wrap">
+        <img class="hero-banner-img" src="maanik-logo.jpg" alt="Maanik Logistics — Your Gateway for Global Trade Solutions. Connecting · Delivering · Empowering." />
+      </div>
+      <div class="hero-banner-actions">
+        <a href="contact.html" class="btn btn-primary">Start Sourcing
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="services.html" class="btn btn-light">Explore Services</a>
+        <a href="tracking.html" class="btn btn-ghost" style="color:#fff;">Track an Order →</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-value">11+</div><div class="hero-stat-label">Industries Served</div></div>
+        <div><div class="hero-stat-value">120+</div><div class="hero-stat-label">Countries Reached</div></div>
+        <div><div class="hero-stat-value">500+</div><div class="hero-stat-label">Vetted Suppliers</div></div>
+        <div><div class="hero-stat-value">100%</div><div class="hero-stat-label">End-to-end</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro + tracking widget strip -->
+  <section class="section-tight intro-strip">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text reveal">
+          <span class="section-eyebrow">Who We Are</span>
+          <h1 style="font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: 14px;">Source from India. <span style="color:var(--copper-500); font-family: var(--font-serif); font-style: italic; font-weight:400;">Delivered worldwide</span>, end-to-end.</h1>
+          <p>Maanik Logistics connects international buyers with trusted Indian manufacturers — handling sourcing, vendor verification, quality assurance, export documentation and worldwide freight, all under one roof.</p>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-card">
-            <h4>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Track Your Shipment
-            </h4>
-            <form class="track-form">
-              <input type="text" placeholder="Enter order or tracking number" aria-label="Tracking number" />
-              <button type="submit" class="btn btn-primary">Track</button>
-            </form>
-            <div class="hero-card-mini">
-              <div class="mini-stat"><div class="label">Active orders</div><div class="value">2,840</div></div>
-              <div class="mini-stat"><div class="label">Delivered</div><div class="value">12,127</div></div>
-              <div class="mini-stat"><div class="label">In QC</div><div class="value">418</div></div>
-              <div class="mini-stat"><div class="label">In transit</div><div class="value">1,096</div></div>
-            </div>
-          </div>
-          <div class="hero-floating top">
-            <div class="dot"></div>
-            <div><strong>Live order status</strong><br /><small>From factory to door</small></div>
-          </div>
-          <div class="hero-floating bottom">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B47547" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 5c0-1.66 4-3 9-3s9 1.34 9 3v0c0 1.66-4 3-9 3s-9-1.34-9-3z"/></svg>
-            <div><strong>Quality assured</strong><br /><small>Pre-shipment inspection</small></div>
+        <div class="hero-card intro-track-card reveal">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Track Your Order
+          </h4>
+          <form class="track-form">
+            <input type="text" placeholder="Enter order or tracking number" aria-label="Tracking number" />
+            <button type="submit" class="btn btn-primary">Track</button>
+          </form>
+          <div class="hero-card-mini">
+            <div class="mini-stat"><div class="label">Active orders</div><div class="value">2,840</div></div>
+            <div class="mini-stat"><div class="label">Delivered</div><div class="value">12,127</div></div>
+            <div class="mini-stat"><div class="label">In QC</div><div class="value">418</div></div>
+            <div class="mini-stat"><div class="label">In transit</div><div class="value">1,096</div></div>
           </div>
         </div>
       </div>
